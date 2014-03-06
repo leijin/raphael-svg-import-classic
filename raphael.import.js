@@ -20,7 +20,7 @@ Raphael.fn.import = function (svgXML, options) {
     if (elShape.nodeType === 3) {
       return;
     }
-    var attr = {"stroke": "none", "stroke-width": 1, "fill":"black"},
+    var attr = {"stroke": "none", "fill":"black"},
         shapeName = elShape.nodeName,
         i, n, key, shape;
     if (elShape.attributes) {
@@ -145,6 +145,7 @@ Raphael.fn.import = function (svgXML, options) {
       }
     }
     shape.attr(attr);
+    shape.data(attr);
 
     // copy group id
     var shapeClass = elShape.getAttribute('class');
