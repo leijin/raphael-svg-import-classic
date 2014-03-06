@@ -6,7 +6,7 @@
 */
 
 /* global Raphael */
-Raphael.fn.importSVG = function (svgXML, options) {
+Raphael.fn.import = function (svgXML, options) {
   "use strict";
   var myNewSet = this.set();
   var groupSet = {};
